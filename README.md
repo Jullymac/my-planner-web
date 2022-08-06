@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+<h1 align="center">
+  My Planner Web
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="Project version" src="https://img.shields.io/github/package-json/v/Jullymac/my-planner-web">
+    <img alt='Build with ReactJs' src="https://img.shields.io/badge/Build%20with-ReactJs-blue">
+  <a href="https://semver.org/" target="_blank">
+    <img alt='Semantic Versioning' src="https://img.shields.io/badge/%20%20%F0%9F%93%A6-semantic--versioning-e10079.svg">
+  </a>
+<a href="https://conventionalcommits.org" target="_blank">
+    <img alt='Conventional Commits' src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white">
+  </a>
+</p>
 
-## Available Scripts
+## Table of content
 
-In the project directory, you can run:
+- [Table of content](#table-of-content)
+- [Project board](#project)
+- [Installation](#installation)
+- [Start](#start)
+- [Main available scripts](#main-available-scripts)
+- [Main libraries and tools](#main-libraries-and-tools)
+- [Changelog](#changelog)
 
-### `npm start`
+## Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+My Planner is composed by an [API](https://github.com/Jullymac/my-planner-api) and a [WEB](https://github.com/Jullymac/my-planner-web) projects.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can check the project's progress in [Trello](https://trello.com/b/TX2UdinO/my-planner) board.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To install the application, you'll need **Git** and **Node.js v16**. From your command line:
 
-### `npm run build`
+```bash
+# Clone this repository
+$ git clone https://github.com/Jullymac/my-planner-web.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Go into the repository
+$ cd my-planner-web
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+$ npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Start
 
-### `npm run eject`
+You can start the application locally with the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ npm run dev
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+It will run at http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Main Available Scripts
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`npm run dev`:  Runs the app in the development mode.
 
-## Learn More
+`npm run test`:  Launches the test runner in the interactive watch mode.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm run build`:  Builds the app for production to the `build` folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm run start`:  Runs the build in production mode.
+
+`npm run lint`:  Runs prettier and eslint.
+
+## Main Libraries and tools
+
+The main libraries and frameworks used in this project are:
+
+- [ReactJs](https://reactjs.org) - v18.2
+- [Typescript](https://www.typescriptlang.org) - v4.7
+- [Prettier](https://prettier.io) - v2.7.1
+- [EsLint](https://eslint.org) - v8.21.0
+- [Husky](https://typicode.github.io/husky) - v8.0
+
+## Changelog
+
+For a full list of changes, see [Changelog](CHANGELOG.md)
