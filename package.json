@@ -1,8 +1,34 @@
 {
   "name": "my-planner-web",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Juliana Macêdo",
+    "url": "https://jullymac.com"
+  },
+  "scripts": {
+    "start": "node server.js 3001",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "npm run lint:es && npm run lint:prettier",
+    "lint:prettier": "prettier --write --ignore-unknown 'src/**/*.{tsx,ts,js,json}'",
+    "lint:es": "eslint 'src/**/*.{tsx,ts,js,json}' --fix",
+    "lint:es:ci": "eslint 'src/**/*.{tsx,ts,js,json}' --quiet",
+    "test": "react-scripts test",
+    "test:coverage": "npm run test -- --coverage",
+    "prepare": "husky install"
+  },
   "dependencies": {
+    "express": "^4.18.1",
+    "express-history-api-fallback": "^2.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,23 +36,38 @@
     "@types/node": "^16.11.47",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "lint-staged": {
+    "src/**/*.{tsx,ts,js,json}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
   },
   "browserslist": {
     "production": [
