@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.2 (2022-08-06)
+
+
+### Documentation
+
+* updates readme.md ([4dc7506](https://github.com/Jullymac/my-planner-web/commit/4dc7506382cc50601978e81660fd79fff989c8ee))
+
 ### 0.1.1 (2022-08-06)
 
 
